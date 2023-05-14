@@ -5,11 +5,11 @@ console.log(`
     Number of categories: ${liItem.length}`);
 
 liItem.forEach(item => {
-    const title = item.querySelector(`h2`).textContent;
-    const list = item.querySelectorAll(`li`);
+    const title = item.firstChild.textContent;
+    const list = item.lastElementChild;
     console.log(`
-    Category: ${title},
-    Elements: ${list.length}`)
+    Category: ${title}`)
+    console.log(`Elements: ${list.length}`)
 })
 
 
